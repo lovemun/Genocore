@@ -1,6 +1,8 @@
-#!/data/lovemun/src_packages/R-3.1.2/bin/Rscript
-#
-#
+#!/bin/env Rscript
+## 150507
+## Seongmun Jeong
+## lovemun@hanyang.ac.kr
+
 suppressPackageStartupMessages(library("argparse"))
 
 parser <- ArgumentParser()
@@ -20,7 +22,7 @@ delta <- args$delta
 pfile <- args$predefined
 output <- args$output
 cat("Reading input argument", "\n")
-source("/data/lovemun/src_packages/GenoCore/coreset.R")
+source(paste0(getwd(), "/", "genocore.R")
 
 if (grepl("csv", file)){
     tdata <- read.csv(file, header=T)
