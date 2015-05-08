@@ -22,7 +22,7 @@ delta <- args$delta
 pfile <- args$predefined
 output <- args$output
 cat("Reading input argument", "\n")
-source(paste0(getwd(), "/", "genocore.R")
+source(paste0(getwd(), "/", "genocore.R"))
 
 if (grepl("csv", file)){
     tdata <- read.csv(file, header=T)
