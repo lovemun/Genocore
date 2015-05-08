@@ -127,7 +127,7 @@ core.set <- function(data.set, preset = NULL, coverage = 99, delta = 0.001,
         } else {
             dy <- coverage1 - as.numeric(coverage.table[(idx-1), 3])
         }
-        cat("Difference is ", dy*100, "%", "\n")
+        cat("Difference is ", dy, "%", "\n")
         coverage.table = rbind(coverage.table, c(idx, names(final.select), coverage1, dy))
         colnames(coverage.table) = c("Iteration","Sample_name", "Coverage", "Difference")
 
