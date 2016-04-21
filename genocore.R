@@ -1,14 +1,14 @@
-core.set <- function(data.set, preset = NULL, coverage = 99, delta = 0.001,
-                     coverage_filename = "Coverage.csv",
-                     Temp_file = "Temp.csv",
-                     Coreset = "Coreset.csv"){
+core.set <- function(data.set, preset = NULL, coverage = 99, delta = 0.001, 
+                                        coverage_filename = "Coverage.csv",
+					Temp_file = "Temp.csv",
+                                        Coreset = "Coreset.csv"){
     if (!is.data.frame(data.set)){
         data.set <- as.data.frame(data.set)
     }
     z <- Sys.time()
     print(z)
-    counts <- data.set
-    data.set <- data.set
+    counts <- data.frame(data.set)
+    data.set <- data.frame(data.set)
     coverage <- as.numeric(coverage)
     nc <- ncol(counts)
     nr <- nrow(counts)
@@ -22,11 +22,8 @@ core.set <- function(data.set, preset = NULL, coverage = 99, delta = 0.001,
     var.num <- vector()
     ide.num <- rep(0, nr)
     var.num <- apply(counts, 1, function(x){length(unique(x[!is.na(x)]))})
-    cat(mean(ide.num/var.num*100), "\n")
-
     mpe<-sum(var.num - 1)
 	
-    cat("Max possible entries", mpe, "\n")
     result <- NULL
     result.idx <- NULL
     overlap.score <- function(x){
@@ -153,6 +150,6 @@ core.set <- function(data.set, preset = NULL, coverage = 99, delta = 0.001,
     coverage.table <- as.data.frame(coverage.table)
     cat("GenoCore selects ",length(result), "element for core sets", "\n")
     cat("Running time is", print(Sys.time() - z), "\n")
-    write.csv(coverage.table, file = coverage_filename, quote = FALSE)
-    write.csv(coreset, file = Coreset, quote = FALSE)
+    write.csv(coverage.table, file = coverage_filename, quote = FALSE, row.names=F)
+    write.csv(coreset, file = Coreset, quote = FALSE, row.names = F)
 }
