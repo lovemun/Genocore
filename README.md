@@ -1,4 +1,4 @@
-# GenoCore : a simple and fast algorithm for selecting core subset applied to large genotype dataset
+# GenoCore : a simple and fast algorithm for core subset selection from large genotype datasets
 Usage : Rscript run_genocore.R input_file -cv coverage -d difference -o result_file_name
 
 Genocore is available at https://github.com/lovemun/Genocore. Source code was written in R language and supported on windows and linux platform. 
