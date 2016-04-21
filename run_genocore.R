@@ -18,7 +18,7 @@ delta <- args$delta
 pfile <- args$predefined
 output <- args$output
 maf <- args$maf
-source("/data/lovemun/src_packages/GenoCore/genocore.R")
+source("genocore.R")
 
 
 if (grepl("csv", file)){
