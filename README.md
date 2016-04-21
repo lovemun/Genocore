@@ -9,7 +9,7 @@ $ git clone https://github.com/lovemun/Genocore
 
 $ cd Genocore
 
-$ Rscript run_genocore.R wheat_subset.csv -cv 100 -d 0.001 -o example &
+$ Rscript run_genocore.R wheat_subset.csv -cv 99 -d 0.001 -o example &
 
 # Contact
 
