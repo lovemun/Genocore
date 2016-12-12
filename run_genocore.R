@@ -1,3 +1,6 @@
+if("argparse" %in% rownames(installed.packages()) == FALSE){
+    install.package("argparse")
+}
 suppressPackageStartupMessages(library("argparse"))
 
 parser <- ArgumentParser()
