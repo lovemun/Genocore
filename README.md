@@ -3,6 +3,12 @@ Usage : Rscript run_genocore.R input_file -cv coverage -d difference -o result_f
 
 Genocore is available at https://github.com/lovemun/Genocore. Source code was written in R language and supported on windows and linux platform. 
 
+# Requirement
+- python : rst2pdf modules
+  - install command in command line : pip install rst2pdf
+- R : argparse package
+  - install command in R : install.packages("argparse")
+
 # Example
 
 $ git clone https://github.com/lovemun/Genocore
