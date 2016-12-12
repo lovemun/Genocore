@@ -1,5 +1,5 @@
 if("argparse" %in% rownames(installed.packages()) == FALSE){
-    install.package("argparse")
+    install.packages("argparse")
 }
 suppressPackageStartupMessages(library("argparse"))
 
