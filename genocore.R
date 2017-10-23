@@ -135,12 +135,12 @@ core.set <- function(data.set, preset = NULL, coverage = 99, delta = 0.001,
             nc <- ncol(counts)
             if (prenum == 0){
                 for (i in 1:nc){
-                    idx1 <- which(coreset[, idx] == counts[, i])
+                    idx1 <- which(as.vector(coreset[, idx]) == as.vector(counts[, i]))
                     counts[idx1, i] = NA
                 }
             } else {
                 for (i in 1:nc){
-                    idx1 <- which(coreset[, prenum + idx - 1] == counts[,i])
+                    idx1 <- which(as.vector(coreset[, prenum + idx - 1]) == as.vector(counts[,i]))
                     counts[idx1,i] = NA
                 }
             }
