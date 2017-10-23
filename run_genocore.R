@@ -1,3 +1,7 @@
+#!/usr/bin Rscript
+## Made by Seongmun Jeong
+## lovemun@kribb.re.kr
+
 if("argparse" %in% rownames(installed.packages()) == FALSE){
     install.packages("argparse")
 }
