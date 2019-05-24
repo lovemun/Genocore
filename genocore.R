@@ -79,7 +79,7 @@ core.set <- function(data.set, preset = NULL, coverage = 99, delta = 0.001,
             overlap <- apply(step01, 1, function(x){mean(x[!is.na(x)])})
         }
 
-        select <- which(overlap == min(overlap))
+        select <- which(overlap == max(overlap))
         cat("Selected", length(select), "candidate genes for", idx, "\n")
 
         if (length(select)==1){
