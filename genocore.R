@@ -140,7 +140,7 @@ core.set <- function(data.set, preset = NULL, coverage = 99, delta = 0.001,
                 }
             } else {
                 for (i in 1:nc){
-                    idx1 <- which(as.vector(coreset[, prenum + idx - 1]) == as.vector(counts[,i]))
+                    idx1 <- which(as.vector(coreset[, prenum + idx]) == as.vector(counts[,i]))
                     counts[idx1,i] = NA
                 }
             }
